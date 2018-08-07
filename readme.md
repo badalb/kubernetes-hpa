@@ -12,3 +12,9 @@
   #kubectl describe hpa
   
   #https://dzone.com/articles/ensure-high-availability-and-uptime-with-kubernete
+
+
+
+kubectl -n kube-system edit deploy metrics-server 
+
+- --source=kubernetes.summary_api:https://kubernetes.default?kubeletHttps=true&kubeletPort=10250&insecure=true
